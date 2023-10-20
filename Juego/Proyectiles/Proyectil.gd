@@ -1,3 +1,4 @@
+class_name Proyectil
 extends Area2D
 
 ## Atributos

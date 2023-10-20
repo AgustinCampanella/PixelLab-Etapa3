@@ -1,4 +1,6 @@
+class_name Canion
 extends Node2D
+
 
 ## Atributos export
 export var proyectil:PackedScene = null
@@ -38,7 +40,7 @@ func disparar() -> void:
 	disparo_sfx.play()
 	timer_enfriamiento.start()
 	for punto_disparo in puntos_disparos:
-		var new_proyectil:Area2D = proyectil.instance()
+		var new_proyectil:Proyectil = proyectil.instance()
 		new_proyectil.crear(
 			punto_disparo.global_position,
 			get_owner().rotation,

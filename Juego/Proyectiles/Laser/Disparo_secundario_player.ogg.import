@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Disparo_secundario_player.ogg-4f58c9f2b86e1668b6ec581763d96698.oggstr"
+
+[deps]
+
+source_file="res://Juego/Proyectiles/Laser/Disparo_secundario_player.ogg"
+dest_files=[ "res://.import/Disparo_secundario_player.ogg-4f58c9f2b86e1668b6ec581763d96698.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

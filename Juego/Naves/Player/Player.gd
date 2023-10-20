@@ -9,7 +9,8 @@ var empuje:Vector2 = Vector2.ZERO
 var dir_rotacion:int = 0
 
 ## Atributos onready
-onready var canion:Node2D = $Canion
+onready var canion:Canion = $Canion
+onready var laser:RayoLaser = $LaserBeam2D
 
 ## Metodos
 func _integrate_forces(state: Physics2DDirectBodyState) -> void:
@@ -40,5 +41,10 @@ func player_input():
 	elif Input.is_action_just_released("disparo_principal"):
 		canion.set_esta_disparando(false)
 
-
+func _unhandled_input(event: InputEvent) -> void:
+	# Disparo Rayo
+	if event.is_action_pressed("disparo_secundario"):
+		laser.set_is_casting(true)
+	elif event.is_action_released("disparo_secundario"):
+		laser.set_is_casting(false)
 
