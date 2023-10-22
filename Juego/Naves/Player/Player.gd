@@ -22,6 +22,7 @@ onready var estela:Estela = $EstelaPuntoInicio/Estela
 onready var motorsfx:Motor = $MotorSFX
 onready var colisionador:CollisionShape2D = $CollisionShape2D
 onready var impacto_sfx:AudioStreamPlayer = $ImpactoSFX
+onready var escudo:Escudo = $Escudo
 
 ## Metodos
 func _ready() -> void:
@@ -109,6 +110,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if (event.is_action_released("mover_adelante") 
 		or event.is_action_released("mover_atras")):
 			motorsfx.sonido_off()
+	
+	#Control Escudo
+	if event.is_action_pressed("escudo") and not escudo.get_esta_activado():
+		escudo.activar()
 
 
 func destruir() -> void:
