@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/explosion_sonido.ogg-29d464c4cc2cdef6984d8e2dbe1a89f8.oggstr"
+
+[deps]
+
+source_file="res://Juego/Explosiones/explosion_sonido.ogg"
+dest_files=[ "res://.import/explosion_sonido.ogg-29d464c4cc2cdef6984d8e2dbe1a89f8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

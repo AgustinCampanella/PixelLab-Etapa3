@@ -1,3 +1,4 @@
+class_name Player
 extends RigidBody2D
 
 ## Enums
@@ -25,6 +26,7 @@ func _ready() -> void:
 	controlador_estados(estado_actual)
 
 
+## Metodos Custom
 func controlador_estados(nuevo_estado:int) -> void:
 	match nuevo_estado:
 		ESTADO.SPAWN:
@@ -38,6 +40,7 @@ func controlador_estados(nuevo_estado:int) -> void:
 		ESTADO.MUERTO:
 			colisionador.set_deferred("disabled", true)
 			canion.set_puede_disparar(false)
+			Eventos.emit_signal("nave_destruida", global_position, 3)
 			queue_free()
 		_:
 			printerr("Error de estado")
@@ -104,6 +107,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if (event.is_action_released("mover_adelante") 
 		or event.is_action_released("mover_atras")):
 			motorsfx.sonido_off()
+
+
+func destruir() -> void:
+	controlador_estados(ESTADO.MUERTO)
+
 
 ##Señales internas
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
