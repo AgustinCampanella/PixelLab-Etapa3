@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sonido_Lluvia_Meteoritos.ogg-683d04fd6fd8f87699829192d2bed116.oggstr"
+
+[deps]
+
+source_file="res://Juego/Meteoritos/Sonido_Lluvia_Meteoritos.ogg"
+dest_files=[ "res://.import/Sonido_Lluvia_Meteoritos.ogg-683d04fd6fd8f87699829192d2bed116.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
