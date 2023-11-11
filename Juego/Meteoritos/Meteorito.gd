@@ -12,6 +12,7 @@ export var hitpoints_base:float = 10.0
 
 ## Atributos
 var hitpoints:float
+var esta_destruido:bool = false
 var esta_en_sector: bool = true setget set_esta_en_sector
 var pos_spawn_original:Vector2
 var vel_spawn_original:Vector2
@@ -45,7 +46,7 @@ func destruir() -> void:
 
 func recibir_danio(danio:float) -> void:
 	hitpoints -= danio
-	if hitpoints <= 0:
+	if hitpoints <= 0 and not esta_destruido:
 		destruir()
 	
 	impacto_sfx.play()
