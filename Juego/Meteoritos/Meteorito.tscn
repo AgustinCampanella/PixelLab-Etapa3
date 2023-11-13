@@ -440,29 +440,17 @@ anims/default = SubResource( 2 )
 anims/impacto = SubResource( 3 )
 
 [node name="meteorito_dim_1" type="Sprite" parent="."]
-visible = false
-position = Vector2( 34.5212, -31.906 )
-rotation = 2.4487
-scale = Vector2( 1e-05, 1e-05 )
+position = Vector2( -0.376038, -0.792847 )
 texture = ExtResource( 4 )
 
 [node name="meteorito_dim_2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 36.7916, 26.9254 )
-rotation = 2.4487
-scale = Vector2( 1e-05, 1e-05 )
+position = Vector2( -0.376038, -0.792847 )
 texture = ExtResource( 5 )
 
 [node name="meteorito_dim_3" type="Sprite" parent="."]
-visible = false
-position = Vector2( -36.2838, -34.1808 )
-rotation = -2.61101
-scale = Vector2( 1e-05, 1e-05 )
+position = Vector2( -0.376038, -0.792847 )
 texture = ExtResource( 4 )
 
 [node name="meteorito_dim_4" type="Sprite" parent="."]
-visible = false
-position = Vector2( -30.9291, 33.855 )
-rotation = -2.61101
-scale = Vector2( 1e-05, 1e-05 )
+position = Vector2( -0.376038, -0.792847 )
 texture = ExtResource( 5 )
