@@ -1,3 +1,4 @@
+#Proyectil.gd
 class_name Proyectil
 extends Area2D
 
