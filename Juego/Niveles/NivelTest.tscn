@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=2]
@@ -11,8 +11,9 @@
 [ext_resource path="res://Juego/Niveles/Fondos/fondo_violeta.png" type="Texture" id=9]
 [ext_resource path="res://icon.png" type="Texture" id=10]
 [ext_resource path="res://Juego/Niveles/CamaraJuego.gd" type="Script" id=11]
-[ext_resource path="res://Juego/Estaciones/EstacionRecarga.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Juego/Estaciones/EstacionRecarga/EstacionRecarga.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Juego/Naves/Enemigos/EnemigoInterceptor.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Juego/Estaciones/BaseEnemiga/BaseEnemiga.tscn" type="PackedScene" id=14]
 
 [node name="NivelTest" type="Node2D"]
 script = ExtResource( 2 )
@@ -45,6 +46,9 @@ numero_peligros = 4
 
 [node name="EstacionRecarga" parent="ContenedorEstaciones" instance=ExtResource( 12 )]
 position = Vector2( 1014.03, 1176.62 )
+
+[node name="BaseEnemiga" parent="ContenedorEstaciones" instance=ExtResource( 14 )]
+position = Vector2( -1408.02, -998.934 )
 
 [node name="CameraNivel" type="Camera2D" parent="."]
 script = ExtResource( 11 )
