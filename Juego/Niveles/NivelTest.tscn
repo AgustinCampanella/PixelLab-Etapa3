@@ -20,6 +20,7 @@ explosion = ExtResource( 4 )
 meteorito = ExtResource( 6 )
 explosion_meteorito = ExtResource( 7 )
 sector_meteoritos = ExtResource( 8 )
+enemigo_interceptor = ExtResource( 13 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
@@ -32,6 +33,13 @@ environment = ExtResource( 3 )
 position = Vector2( 1568.01, -949.279 )
 tipo_peligro = "Meteorito"
 numero_peligros = 3
+
+[node name="TriggersInterceptores" type="Node" parent="."]
+
+[node name="SectorDePeligro" parent="TriggersInterceptores" instance=ExtResource( 5 )]
+position = Vector2( -742.892, 974.258 )
+tipo_peligro = "Enemigo"
+numero_peligros = 4
 
 [node name="ContenedorEstaciones" type="Node" parent="."]
 
@@ -113,7 +121,4 @@ texture = ExtResource( 9 )
 [node name="Fondo15" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 2048, 1024 )
 texture = ExtResource( 9 )
-
-[node name="EnemigoInterceptor" parent="." instance=ExtResource( 13 )]
-position = Vector2( 576.302, 101.185 )
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

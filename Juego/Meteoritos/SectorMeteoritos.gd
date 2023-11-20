@@ -42,4 +42,5 @@ func _on_Timer_timeout() -> void:
 	cantidad_meteoritos -= 1
 
 func _on_detector_body_entered(body: Node) -> void:
-	body.set_esta_en_sector(false)
+	if body is Meteorito:
+		body.set_esta_en_sector(false)
